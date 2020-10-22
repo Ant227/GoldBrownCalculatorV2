@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D8D8D8"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="80dp"
+       android:background="@drawable/gradient1"
+       android:text="Daw Mya Yin Jewellery \n Calculator"
+       android:gravity="center"
+       android:textColor="@color/colorWhite"
+       android:textSize="20dp"
+       />
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:layout_marginBottom="10dp"
+       android:layout_marginStart="10dp"
+       android:layout_marginEnd="10dp"
+       app:cardCornerRadius="5dp"
+       app:cardElevation="6dp"
+       app:cardUseCompatPadding="false">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:background="@color/colorWhite">
+
+
+
+
+<RelativeLayout
+    android:id="@+id/first_layer"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true"/>
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_arrow_pointing_to_right"
+        />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="130dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"/>
+
+
+</RelativeLayout>
+
+
+           <EditText
+               android:id="@+id/input_value"
+               android:layout_width="wrap_content"
+               android:layout_height="60dp"
+               android:ems="10"
+               android:layout_centerVertical="true"
+               android:layout_centerHorizontal="true"
+               android:hint="Input Here (gram)"
+               android:gravity="center"
+               android:background="@drawable/border"
+               android:inputType="numberDecimal" />
+
+
+           <Button
+               android:id="@+id/convert_button"
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:background="@drawable/button"
+               android:layout_marginStart="30dp"
+               android:layout_marginEnd="30dp"
+               android:layout_alignParentBottom="true"
+               android:layout_marginBottom="20dp"
+               android:text="Convert"
+                android:textColor="@color/colorWhite"
+               />
+       </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+
+
+            android:background="@drawable/gradient2">
+
+            <TextView
+                android:id="@+id/calculated_with_1_kyat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Calculated with 1 kyat = 120 Y"
+                android:textColor="@color/colorWhite"
+                android:textSize="17dp" />
+
+            <RelativeLayout
+                android:id="@+id/total_weight_layer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/calculated_with_1_kyat">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Total Weight ( gram )"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/total_weight"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="Total weight"
+                    android:textColor="@color/colorBlack" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/pure_gold_weight_layer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/total_weight_layer">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Needed To add 100%Gold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/pure_gold_weight"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="Pure Gold \n Weight"
+                    android:textColor="@color/colorBlack" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+
+        <TextView
+            android:id="@+id/density"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Density"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"/>
+
+
+        <TextView
+            android:id="@+id/density_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/density"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="5dp"
+            android:textSize="19dp"
+            android:text="15.8"/>
+
+
+
+        <TextView
+            android:id="@+id/created_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="developed by"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginRight="10dp"
+            android:textSize="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/created_by"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginTop="5dp"
+            android:textSize="10dp"
+            android:text="Ant Bone Kyaw"/>
+
+
+        <TextView
+            android:id="@+id/Bronze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Bronze"
+            android:textColor="@color/colorBlack"
+            android:layout_marginRight="20dp"
+            android:textSize="15dp"/>
+
+
+        <TextView
+            android:id="@+id/Bronze_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/Bronze"
+            android:textColor="@color/colorBlack"
+            android:layout_centerHorizontal="true"
+            android:textSize="19dp"
+            android:text="3.1125"/>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
